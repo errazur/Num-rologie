@@ -6,6 +6,11 @@ function btn1() {
 
     var ullist = document.getElementById('liste')
 
+    var lis = document.querySelectorAll('#liste li');
+    for (var i = 0; li = lis[i]; i++) {
+        li.parentNode.removeChild(li);
+    }
+
     var liactif = document.createElement('li');
     liactif.id = "nbactif";
 
@@ -56,14 +61,14 @@ function btn1() {
         return x + y;
     }
 
-    function calcNb3premier(tab, tab2) {
+    function calcNb3premier(prenom, tab2) {
         var res = 0;
         var resultat = 0;
         var passage = new String;
-        for (var t = 0; t < tab.length; t++) {
+        for (var t = 0; t < prenom.length; t++) {
             for (var i = 1; i < 10; i++) {
                 for (var j = 0; j < 3; j++) {
-                    if (tab[t].toUpperCase() == tab2[i][j]) {
+                    if (prenom[t].toUpperCase() == tab2[i][j]) {
                         res += i;
                     }
                 }
@@ -152,7 +157,7 @@ function btn1() {
         }
         passage2 = res.toString();
         do {
-            resultat= 0;
+            resultat = 0;
             for (var q = 0; q < passage2.length; q++) {
                 resultat += parseInt(passage2.charAt(q));
             }
@@ -197,7 +202,7 @@ function btn1() {
     var textIntime = document.createTextNode("Votre nombre intime est : " + nbIntime);
     var textRea = document.createTextNode("Votre nombre de réalisation est : " + nbRea);
     var textInitiale = document.createTextNode("Votre nombre issu des initiale est : " + nbInitiale);
-    var textEvolution = document.createTextNode("Votre nombre d'évolution est : " + nbEvo);
+    //var textEvolution = document.createTextNode("Votre nombre d'évolution est : " + nbEvo);
 
     liactif.appendChild(textactif);
     liheredit.appendChild(textHeredit);
@@ -205,7 +210,7 @@ function btn1() {
     liintime.appendChild(textIntime);
     lirea.appendChild(textRea);
     liinitia.appendChild(textInitiale);
-    lievo.appendChild(textEvolution);
+    //lievo.appendChild(textEvolution);
 
     ullist.appendChild(liactif);
     ullist.appendChild(liheredit);
@@ -213,5 +218,5 @@ function btn1() {
     ullist.appendChild(liintime);
     ullist.appendChild(lirea);
     ullist.appendChild(liinitia);
-    ullist.appendChild(lievo);
+    //ullist.appendChild(lievo);
 }

@@ -7,22 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="dom.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Numérologie</h1>
-    <ul>
-        <li><input id="prenom" type="text" name="name" placeholder="Votre Prénom"></li>
-        <li><input id="nom" type="text" name="name" placeholder="Votre nom"></li>
-        <li><input id="dtn" type="Date" name="name"></li>
-        <li><input id="button" type="button" value="Valider" onclick="btn1()"></li>
-    </ul>
+    <header class="Titre">
+        <h1>Numérologie</h1>
+    </header>
 
-    <div id="resultat">
-        <ul id="liste">
+    <div class="container">
 
-        </ul>
+        <div class="Border">
+
+            <div class="Formulaire">
+                <ul>
+                    <li><input id="prenom" type="text" name="name" placeholder="Votre Prénom"></li>
+                    <li><input id="nom" type="text" name="name" placeholder="Votre nom"></li>
+                    <li><input id="dtn" type="Date" name="name"></li>
+                    <li><input id="button" type="button" value="Valider" onclick="btn1()"></li>
+                </ul>
+            </div>
+
+            <div id="resultat" class="result">
+                <ul id="liste">
+
+                </ul>
+            </div>
+            
+        </div>
+
     </div>
+
 </body>
 
 </html>
